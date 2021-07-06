@@ -1,0 +1,25 @@
+{
+	"name": "azure-terraform-devcontainer",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": { 
+			"TERRAFORM_VERSION": "0.15.1",
+			"TFLINT_VERSION": "0.28.1",
+		},
+	},	
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"terraform.languageServer": {
+			"enabled": true,
+			"args": []
+		},
+		"terraform.indexing": {
+			"enabled": false,
+			"liveIndexing": false
+		},
+	},
+	"extensions": [
+		"hashicorp.terraform",
+		"ms-vscode.azurecli"		
+	],
+}
